@@ -69,8 +69,6 @@ int main() {
 
 		for (int i = 1; i <= n; i++) {
 
-			if (k == 0)
-				break;
 
 	
 			sum += a[i - 1];
