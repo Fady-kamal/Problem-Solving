@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = unsigned long long;
+
 void printvector(vector<int>& vec) {
 
 	cout << '[';
@@ -17,34 +18,7 @@ void printvector(vector<int>& vec) {
 }
 
 
-/*
-* Required: Minum Number of Moves
-*
-* Approach:
-* --------
-* 
-*
-*
-*/
 
-
-int getIndex(string name, char element) {
-
-	int index = -1;
-
-	for (int i = 0; i <= name.length(); i++) {
-
-	
-
-		if (element == name[i])
-			index = i;
-	}
-
-
-
-	return index;
-
-}
 
 
 int getIndex(vector<int> vec, int element,char direction) {
