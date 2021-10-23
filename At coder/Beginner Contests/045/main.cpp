@@ -20,7 +20,9 @@ int main() {
 
 	for (int mask = 0; mask < (1 << numberOfSigns) ; mask++) {
 
+		//for accumulation
 		ll currentSum = 0;
+		//store the part of the number that will be added to currentSum
 		ll sofar = 0;
 
 		//ith bit in the mask indicates that there is a sign after the ith element or not 
