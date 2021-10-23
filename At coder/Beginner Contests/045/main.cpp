@@ -22,6 +22,8 @@ int main() {
 
 		ll currentSum = 0;
 		ll sofar = 0;
+
+		//ith bit in the mask indicates that there is a sign after the ith element or not 
 		//Loop on every bit in mask 
 		for (int i = 0; i < numberOfSigns; i++) {
 
