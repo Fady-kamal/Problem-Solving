@@ -25,20 +25,20 @@ int main()
 
 
 		int start = 0;
-		int current_max = n;
+		int upper_bound = n;
 
 		for (int i = n; i > 0; i--) {
 
 			start = position[i]; //index of element i 
 
-			if (current_max > start) {
+			if (upper_bound > start) {
 
-				for (int j = start; j < current_max; j++) {
+				for (int j = start; j < upper_bound; j++) {
 					cout << p[j] << " ";
 				}
 
 
-				current_max = start;
+				upper_bound = start;
 			}
 		}
 
