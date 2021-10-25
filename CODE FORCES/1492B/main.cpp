@@ -31,6 +31,8 @@ int main()
 
 			start = position[i]; //index of element i 
 
+
+			//if true, pick the element(before the upperbound) from max element and before the upper bound
 			if (upper_bound > start) {
 
 				for (int j = start; j < upper_bound; j++) {
