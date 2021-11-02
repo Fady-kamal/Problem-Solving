@@ -60,6 +60,9 @@ int main()
 		int ans = 1e9;
 		for (int i = 2; i <= 2 * n; i+= 2) {
 			//find the minum sum of indexes 
+			//you sum every element in b with the smallest index 
+			//for element in a less than the element in b
+			//and you ge the minum sum out of those sums 
 			ans = min(ans, pos[i] + mp[i - 1]);
 		}
 
