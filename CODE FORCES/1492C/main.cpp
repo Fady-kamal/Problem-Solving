@@ -87,8 +87,8 @@ int main(){
 
 	// get the max(diff)
 	ll maxi = LLONG_MIN;
-	for (int i = 1; i < m ; i++) {
-		maxi = max(maxi, abs(r[i ] - l[i - 1]));
+	for (int i = 0; i < m - 1 ; i++) {
+		maxi = max(maxi, r[i+1] - l[i]);
 	}
  
 	cout << maxi;
