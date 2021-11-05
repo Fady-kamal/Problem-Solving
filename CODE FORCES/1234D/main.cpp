@@ -28,6 +28,7 @@ int main() {
 
 
 	//hold the possible positions for every letter 
+	//set_i have positions of the alphabet letter i in string s
 	for (int i = 0; i < s.size(); ++i) {
 
 		pos[s[i] - 'a'].insert(i);
@@ -51,14 +52,14 @@ int main() {
 			
 
 
-			//remove the element at idx c
+			//Remove position from the alphabet letter s[idx]
 			pos[s[idx] - 'a'].erase(idx);
 			
 
 			//set
 			s[idx] = c;
 
-			//add
+			//add position to the alphbet letter c 
 			pos[c - 'a'].insert(idx);
 		}
 
