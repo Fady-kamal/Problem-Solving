@@ -48,7 +48,7 @@ void solve(int idx) {
 	//work done !
 	if (idx == numTracks) {
 		check();
-		return;
+		 
 	}
 
 	else {
