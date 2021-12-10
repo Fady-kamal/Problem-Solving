@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+#define ll long long
+#define Pair pair<ll,ll>
+
+using namespace std;
+#define fr(n) for(int i=0;i<n;i++)
+#define frj(n) for(int j=0;j<n;j++)
+#define frk(n) for(int k=0;k<n;k++)
+#define fr1(n) for(int i=1;i<=n;i++)
+#define el '\n'
+#define f first 
+#define s second
+#define all(x) (x).begin(), (x).end()
+#define allrev(x) (x).rbegin(), (x).rend()
+#define fast  ios::sync_with_stdio(0), cin.tie(0) , cout.tie(0);
+//cout << fixed << setpercision(# of digits after the fixed point 
+
+const int N = 3e5 + 5;
+
+bool cmp(int a, int b) {
+    
+    return a > b;
+}
+ 
+ 
+
+
+int main() {
+
+    int n;
+    cin >> n;
+
+    string str;
+    cin >> str;
+ 
+
+    int cnt = 0;
+    for (int i = 0; i < str.size() - 1; i++) {
+        if (str[i] == str[i + 1])
+            cnt++;
+    }
+
+    cout << cnt << el;
+
+}
