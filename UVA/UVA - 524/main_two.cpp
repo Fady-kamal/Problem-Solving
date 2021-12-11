@@ -18,10 +18,10 @@ using namespace std;
 const int N = 3e5 + 5;
 
 bool cmp(int a, int b) {
-	
+
 	return a > b;
 }
- 
+
 
 
 
@@ -29,44 +29,72 @@ int n, Case = 0, ans[20] = { 1 };
 
 bool isPrime(int n) {
 
-	if (n <= 1) {
-		return false;
-	}
-	else {
 
-		for (int i = 2; i <= sqrt(n); ++i) {
+	if (n <= 1)
+		return false;
+	else {
+		for (int i = 2; i <= sqrt(n); i++) {
 			if (n % i == 0)
 				return false;
 		}
 	}
 
-
 	return true;
 }
 
-void backtracking(int L, bool chosen) {
+
+void backtracking(int L, bool chosen[]) {
 
 	//if we reach our goal, print the permutation 
-	if (L == N) {
+	if (L == n) {
 
-		if (!isPrime(ans[N - 1] + 1))
+		if (!isPrime(ans[n- 1] + 1))
 			return;
 
 
 		cout << 1;
-		
-		for (int i = 1; i < N; i++) {
-			cout << " "  << ans[i];
+
+		for (int i = 1; i < n; i++) {
+			cout << " " << ans[i];
 		}
 		cout << el;
 		return;
+	}
 
- 
+	//Take a choice from out decision space
+	for (int i = 2; i <= n; i++) {
+		if (chosen[i])
+			continue;
+
+		//explore 
+		if (isPrime(i + ans[L - 1])) {
+			chosen[i] = 1;
+			ans[L] = i;
+			backtracking(L + 1, chosen);
+		}
+
+
+		//Un-choose
+		chosen[i] = 0;
 
 	}
+
+
+
+
+
 }
 
 
-int main() {
  
+ 
+
+int main() {
+	while (cin >> n) {
+		if (Case++) cout << el;
+
+		cout << "Case " << Case << el;
+		bool chosen[20] = { 0 };
+		backtracking(1, chosen);
+	}
 }
