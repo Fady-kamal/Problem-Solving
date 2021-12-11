@@ -48,7 +48,7 @@ void backtracking(int L, bool chosen[]) {
 	//if we reach our goal, print the permutation 
 	if (L == n) {
 
-		if (!isPrime(ans[n- 1] + 1))
+		if (!isPrime(ans[n - 1] + 1))
 			return;
 
 
@@ -86,14 +86,14 @@ void backtracking(int L, bool chosen[]) {
 }
 
 
- 
- 
+
+
 
 int main() {
 	while (cin >> n) {
 		if (Case++) cout << el;
 
-		cout << "Case " << Case << el;
+		cout << "Case " << Case << ":" << el;
 		bool chosen[20] = { 0 };
 		backtracking(1, chosen);
 	}
